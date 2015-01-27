@@ -1,8 +1,188 @@
 /*variables*/
-$background: blue;
+$main_color: #0084c2;
+$second_color: #FF6633;
+$third_color: #222222;
 
 /*end variables*/
 
 body {
-	background: $background;
+	background: $second_color;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	
+		#title {
+		margin: 0;
+		padding: 30px;
+		border: 0;
+		text-transform: uppercase;
+		}
+
+		#login {
+		margin: 0;
+		padding: 30px;
+		border: 0;
+		text-transform: uppercase;
+		position: relative;
+		top:-97px;
+		left: 75%;
+		color: black;
+		}
+
 }
+
+header {
+	width: 100%;
+	height: 100px;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+#post_section {
+	width: 100%;
+	min-height: 400px;
+	background: $main_color +10;
+		textarea {
+		background-color: $main_color;
+		width: 87%;
+		min-height: 300px;
+		margin: 5%;
+		padding: 20px;
+		border: none;
+		border-radius: 5px;
+		font-size: 50px;
+		color: white;
+		box-shadow: 0 -5px 15px rgba(100, 100, 100, 0.2) inset, 0 1px 1px rgba(255, 255, 255, 0.2);
+	}
+
+	button {
+	border-radius: 10px;
+	background-color: $second_color ;
+	vertical-align: middle;
+	border: none;
+	font-size: 50px;
+	color: white;
+	position: relative;
+	left: 80%;
+	bottom: -15px;
+	min-height: 70px;
+	z-index: 1; 
+
+
+	}
+
+	button:hover {
+		color: $main_color;
+	}
+
+}
+
+#main_content {
+	min-height: 600px;
+	width: 100%;
+
+	button, select {
+	border-radius: 8px;
+	margin-left: 10px;
+	background-color: $main_color +10;
+	vertical-align: middle;
+	border: none;
+	font-size: 50px;
+	color: white;
+	position: relative;
+	left: 5%;
+	bottom: 15px;
+	min-height: 70px;
+
+
+
+	}
+
+	button:hover, button:active {
+		color: $second_color;
+	}
+}
+
+/*light slider*/
+	    ul{
+			list-style: none outside none;
+		    padding-left: 0;
+		}
+
+		a {
+			color: white;
+		}
+		a:hover {
+			color: $main_color;
+		}
+		.content-slider li{
+		    background-color: $second_color +20;
+		    text-align: center;
+		    color: #FFF;
+		    height: 300px;
+		    /*box-shadow: 5px 15px 5px black;*/
+		    overflow: scroll;
+
+
+		}
+		.content-slider h3 {
+		    margin: 0;
+		    padding: 70px 0;
+		    font-size: 30px;
+		}
+		.lightslider{
+			width: 80%;
+			height: 300px;
+			margin: 0 auto;
+			padding: 100px 0 0 0;
+		}
+
+footer {
+	width: 100%;
+	height: 100px;
+	padding: 0;
+	margin: 0;
+	background-color: $third_color;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
