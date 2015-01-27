@@ -6,6 +6,12 @@
 
 =========================================================/**/
 ;
+$(document).ready(function() {
+            $("#lightslider").lightSlider({
+                loop:true,
+                keyPress:true
+            });
+        });
 (function ($, undefined) {
     "use strict";
     var defaults = {
