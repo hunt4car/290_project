@@ -1,6 +1,5 @@
 <?php 
-include 'includes/variables.php';
-ob_start();
+include 'includes/secure_includes.php';
  ?>
  <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +22,6 @@ ob_start();
 
 <header>
 	<h1 id="title">Un-social Media</h1>
-	<a href="#"><h1 id="login">Log out</h1></a>  <!-- add logic -->
+	<!-- <a href="#"><h1 id="login">Log out</h1></a>  <!-- add logic --> 
 
 </header>

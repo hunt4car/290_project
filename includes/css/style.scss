@@ -19,7 +19,7 @@ body {
 		text-transform: uppercase;
 		}
 
-		#login {
+		/*#login {
 		margin: 0;
 		padding: 30px;
 		border: 0;
@@ -29,7 +29,7 @@ body {
 		left: 75%;
 		color: black;
 		}
-
+*/
 }
 
 header {
@@ -50,6 +50,8 @@ header {
 		width: 87%;
 		min-height: 20px;
 		margin: 5%;
+		margin-top: 30px;
+		margin-bottom: 10px;
 		padding: 0px;
 		text-align: center;
 		border: none;
@@ -59,7 +61,50 @@ header {
 		box-shadow: 0 -5px 15px rgba(100, 100, 100, 0.2) inset, 0 1px 1px rgba(255, 255, 255, 0.2);
 	}
 
-	button {
+	input {
+	border-radius: 10px;
+	background-color: $second_color ;
+	vertical-align: middle;
+	border: none;
+	font-size: 50px;
+	color: white;
+	position: relative;
+	left: 60%;
+	bottom: -15px;
+	margin-right: 2%;
+	min-height: 70px;
+	z-index: 1; 
+
+
+	}
+
+	input:hover {
+		color: $main_color;
+	}
+
+}
+
+#signuppage {
+	width: 100%;
+	min-height: 400px;
+	background: $main_color +10;
+		textarea {
+		background-color: $main_color;
+		width: 87%;
+		min-height: 20px;
+		margin: 5%;
+		margin-top: 20px;
+		margin-bottom: 0px;
+		padding: 0px;
+		text-align: center;
+		border: none;
+		border-radius: 5px;
+		font-size: 42px;
+		color: white;
+		box-shadow: 0 -5px 15px rgba(100, 100, 100, 0.2) inset, 0 1px 1px rgba(255, 255, 255, 0.2);
+	}
+
+	input {
 	border-radius: 10px;
 	background-color: $second_color ;
 	vertical-align: middle;
@@ -75,7 +120,7 @@ header {
 
 	}
 
-	button:hover {
+	input:hover {
 		color: $main_color;
 	}
 
@@ -110,7 +155,7 @@ header {
 		box-shadow: 0 -5px 15px rgba(100, 100, 100, 0.2) inset, 0 1px 1px rgba(255, 255, 255, 0.2);
 	}
 
-	button {
+	input {
 	border-radius: 10px;
 	background-color: $second_color ;
 	vertical-align: middle;
@@ -126,7 +171,7 @@ header {
 
 	}
 
-	button:hover {
+	input:hover {
 		color: $main_color;
 	}
 

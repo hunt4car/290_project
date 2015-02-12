@@ -1,15 +1,18 @@
 <?php
 $pagetitle = "login";
+$loggedin = 2;
 include 'includes/header.php';
  ?>
 
 <div id="loginpage">
-	<form action="#">
+	<form action="includes/login_submit.php" method="post">
 		<!-- <label>Post:</label> -->
-		<textarea class="input_expandable" name="name" placeholder="Email or Username" type="text"></textarea>
-		<textarea class="input_expandable" name="name" placeholder="Password" type="text"></textarea>
+		<textarea class="input_expandable" name="username" placeholder="Email or Username" type="text"></textarea>
+		<textarea class="input_expandable" name="password" placeholder="Password" type="text"></textarea>
 
-		<button id="post_button">Log In</button>
+		<a href="google.com"><button id="post_button">Sign Up</button></a>
+		<!-- <button id="post_button">Log In</button> -->
+		<input type="submit" value="submit" name="submit_login" />
 
 	</form>
 

@@ -1,19 +1,21 @@
 <?php 
 $pagetitle = "index";
 include 'includes/header.php';
- ?>
+?>
 
 <div id="post_section">
-	<form action="#">
+	<form action="includes/year_submit.php" method="post">
 		<!-- <label>Post:</label> -->
-		<textarea class="input_expandable" name="name" placeholder="Just for you..." type="text"></textarea>
+		<textarea class="input_expandable" name="post" placeholder="<?php echo 'Just for you '.$first_name.'...'; ?>" type="text"></textarea>
 
-		<button id="post_button">Post</button>
+		<!-- <button id="post_button">Post</button> -->
+		<input type="submit" value="Post" name="submit_login" />
 
 	</form>
 
 </div>
-
+<?php 
+// echo $_SESSION["first_name"]; ?>
 <div id="main_content">
 
 <select ONCHANGE="location = this.options[this.selectedIndex].value;">

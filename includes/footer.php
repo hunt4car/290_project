@@ -7,4 +7,9 @@
 </body>
 </html>
 <?php 
-ob_end_flush(); ?>
+	//flush output buffer
+	ob_end_flush();
+	//close db connection !!add later
+	// mysqli_close($dbc); 
+
+?>
