@@ -1,5 +1,6 @@
 <?php
 $pagetitle = "login";
+$loggedin = 1;
 include 'includes/header.php';
  ?>
 

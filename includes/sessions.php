@@ -14,7 +14,7 @@ session_start();
 
 // end login_submit.php sessions
 
-$loggedin = $_SESSION["loggedin"];
+// $loggedin = $_SESSION["loggedin"];
 $user_id = $_SESSION["user_id"];
 $first_name = $_SESSION["first_name"];
 $roll_id = $_SESSION["roll"];

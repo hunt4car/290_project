@@ -1,7 +1,11 @@
 <?php 
 $pagetitle = "index";
 include 'includes/header.php';
+
+$date = date("Y/m/d");
+echo $date;
 ?>
+
 
 <div id="post_section">
 	<form action="includes/year_submit.php" method="post">

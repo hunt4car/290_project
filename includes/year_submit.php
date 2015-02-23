@@ -5,9 +5,9 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
 
         $post = $_POST['post'];
-        
+        $date = date("Y/m/d", time());
 
-        $sql= "INSERT INTO posts(`post_content`,`user_id`) VALUES('$post','$user_id')";
+        $sql= "INSERT INTO posts(`post_content`,`user_id`, `date`) VALUES('$post','$user_id','$date')";
 
         if (mysqli_query($dbc, $sql)) {
             header("Location:".$baseurl."index.php");

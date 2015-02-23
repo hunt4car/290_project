@@ -1,6 +1,8 @@
 <?php
+
 $pagetitle = "login";
-$loggedin = 2;
+// $loggedin = 1;
+
 include 'includes/header.php';
  ?>
 
@@ -9,12 +11,15 @@ include 'includes/header.php';
 		<!-- <label>Post:</label> -->
 		<textarea class="input_expandable" name="username" placeholder="Email or Username" type="text"></textarea>
 		<textarea class="input_expandable" name="password" placeholder="Password" type="text"></textarea>
-
-		<a href="google.com"><button id="post_button">Sign Up</button></a>
+		
+		
+		<!-- <a href="google.com"><button id="post_button">Sign Up</button></a> -->
 		<!-- <button id="post_button">Log In</button> -->
 		<input type="submit" value="submit" name="submit_login" />
 
 	</form>
+
+	<a href="<?php echo $baseurl."signup.php"; ?>"><button>Sign Up</button></a>
 
 </div>
 

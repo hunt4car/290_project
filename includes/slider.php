@@ -9,7 +9,7 @@
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
                         echo "<li>";
-                        echo "<p>1/22/2013</p>";
+                        echo "<p>".$row['date']."</p>";
                         // $clientid.$i =
                         echo "<h3>".$row["post_content"]."</h3>";
                         echo "</li>";
