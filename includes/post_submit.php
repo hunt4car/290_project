@@ -5,9 +5,10 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
 
 
         $post = $_POST['post'];
-        $date = date("Y/m/d", time());
+        $date = date("Y/m/d");
 
-        $sql= "INSERT INTO posts(`post_content`,`user_id`, `date`) VALUES('$post','$user_id','$date')";
+
+        $sql= "INSERT INTO posts(`post_content`,`user_id`, `post_date`) VALUES('$post','$user_id','$date')";
 
         if (mysqli_query($dbc, $sql)) {
             header("Location:".$baseurl."index.php");
