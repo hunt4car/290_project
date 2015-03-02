@@ -1,9 +1,7 @@
 <?php 
 $pagetitle = "index";
 include 'includes/header.php';
-
 include 'includes/post_section.php';
-
 ?>
 <div id="main_content">
 
