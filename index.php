@@ -27,15 +27,15 @@ include 'includes/post_section.php';
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
                         echo "<li>";
-                        // if ($row['post_date'] = date("Y-m-d")) {
-                        //     echo "<p>Today</p>";
-                        //     // echo $row['post_date'];
-                        //     // echo date("Y-m-d");
-                        // } else {
-                        //     echo "<p>".$row['post_date']."</p>";
-                        // }
+                        if ($row['post_date'] = date("Y-m-d")) {
+                            echo "<p>Today</p>";
+                            // echo $row['post_date'];
+                            // echo date("Y-m-d");
+                        } else {
+                            echo "<p>".$row['post_date']."</p>";
+                        }
                         
-                        echo "<p>".$row['post_date']."</p>";
+                        // echo "<p>".$row['post_date']."</p>";
                         echo "<h3>".$row["post_content"]."</h3>";
                         echo "</li>";
                     }//end while
