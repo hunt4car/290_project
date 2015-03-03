@@ -1,6 +1,6 @@
 <?php 
 $pagetitle = "index";
-include 'includes/header.php';
+include 'includes/secure_header.php';
 include 'includes/post_section.php';
 ?>
 <div id="main_content">
@@ -9,10 +9,9 @@ include 'includes/post_section.php';
     <option value="index.php#main_content">Year</option>
     <option value="month.php#main_content">Month</option>
     <option value="week.php#main_content">Week</option>
-    <option value="today.php#main_content">Today</option>
-    </select>
-<a href="stats.php"><button id="post_button">Stats</button></a>
-<a href="more.php"><button id="post_button">More</button></a>
+</select>
+<!-- <a href="stats.php"><button id="post_button">Stats</button></a>
+<a href="more.php"><button id="post_button">More</button></a> -->
 
 <div class="lightslider">
             <?php 
@@ -28,15 +27,22 @@ include 'includes/post_section.php';
                     // output data of each row
                     while($row = $result->fetch_assoc()) {
                         echo "<li>";
+                        // if ($row['post_date'] = date("Y-m-d")) {
+                        //     echo "<p>Today</p>";
+                        //     // echo $row['post_date'];
+                        //     // echo date("Y-m-d");
+                        // } else {
+                        //     echo "<p>".$row['post_date']."</p>";
+                        // }
+                        
                         echo "<p>".$row['post_date']."</p>";
-                        // $clientid.$i =
                         echo "<h3>".$row["post_content"]."</h3>";
                         echo "</li>";
                     }//end while
                 echo "</ul>";
                 $i++;
             } else {
-            echo "0 results found in user database!";
+            echo "<h1>0 results found!</h1>";
             }// end if else
 
              ?>
@@ -46,5 +52,5 @@ include 'includes/post_section.php';
 </div> <!-- end main content -->
 
 <?php 
-include 'includes/footer.php';
+include 'includes/secure_footer.php';
  ?>

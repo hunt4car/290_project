@@ -17,19 +17,24 @@ body {
 		padding: 30px;
 		border: 0;
 		text-transform: uppercase;
+		color: $third_color;
 		}
 
-		/*#login {
+		#logout {
 		margin: 0;
-		padding: 30px;
 		border: 0;
 		text-transform: uppercase;
-		position: relative;
-		top:-97px;
-		left: 75%;
 		color: black;
+		position: absolute;
+		right: 10%;
+		top:30px;
+		color: $second_color;
 		}
-*/
+
+		#logout:hover {
+		color: $main_color;
+		}
+
 }
 
 header {
@@ -48,38 +53,56 @@ header {
 		textarea {
 		background-color: $main_color;
 		width: 87%;
-		min-height: 20px;
+		height: 100px;
 		margin: 5%;
 		margin-top: 30px;
 		margin-bottom: 10px;
-		padding: 0px;
+		padding: 10px;
 		text-align: center;
 		border: none;
 		border-radius: 5px;
-		font-size: 88px;
+		font-size: 78px;
 		color: white;
 		box-shadow: 0 -5px 15px rgba(100, 100, 100, 0.2) inset, 0 1px 1px rgba(255, 255, 255, 0.2);
 	}
 
 	input {
 	border-radius: 10px;
-	background-color: $second_color ;
+	background-color: $second_color;
 	vertical-align: middle;
 	border: none;
 	font-size: 50px;
 	color: white;
 	position: relative;
-	left: 60%;
-	bottom: -15px;
-	margin-right: 2%;
+	left: 80%;
+	bottom: -85px;
 	min-height: 70px;
-	z-index: 1; 
+	z-index: 1;  
 
 
 	}
 
 	input:hover {
 		color: $main_color;
+	}
+
+	#signup {
+		border-radius: 8px;
+	margin-left: 10px;
+	background-color: $main_color +10;
+	vertical-align: middle;
+	border: none;
+	font-size: 50px;
+	color: white;
+	position: relative;
+	left: 5%;
+	bottom: -55px;
+	min-height: 70px;
+
+	}
+
+	#signup:hover {
+		color: $third_color;
 	}
 
 }
@@ -104,7 +127,7 @@ header {
 		box-shadow: 0 -5px 15px rgba(100, 100, 100, 0.2) inset, 0 1px 1px rgba(255, 255, 255, 0.2);
 	}
 
-	input {
+	input{
 	border-radius: 10px;
 	background-color: $second_color ;
 	vertical-align: middle;
@@ -124,6 +147,21 @@ header {
 		color: $main_color;
 	}
 
+	button {
+		border-radius: 8px;
+	margin-left: 10px;
+	background-color: $main_color +10;
+	vertical-align: middle;
+	border: none;
+	font-size: 50px;
+	color: white;
+	position: relative;
+	left: 5%;
+	bottom: -15px;
+	min-height: 70px;
+	margin: 0px;
+}
+
 }
 
 #about {
@@ -132,7 +170,7 @@ header {
 
 	h1 {
 	text-align: center;
-	padding: 20px;
+	padding: 60px;
 	font-size: 44px;
 	/*color: red;*/
 }
@@ -203,6 +241,7 @@ header {
 	}
 }
 
+
 /*light slider*/
 	    ul{
 			list-style: none outside none;
@@ -236,6 +275,8 @@ header {
 			margin: 0 auto;
 			padding: 100px 0 0 0;
 		}
+
+
 
 footer {
 	width: 100%;

@@ -1,7 +1,5 @@
 <?php 
-include'mysqli_connect.php';
-include'includes/functions.php';
-//for non-user protected pages
+include 'includes/secure_includes.php'; //for user protected pages!
  ?>
  
 <!DOCTYPE html>
@@ -27,5 +25,5 @@ include'includes/functions.php';
 <body>
 <header>
 	<?php echo "<a href='".$baseurl."index.php'><h1 id='title'>Un-social Media - ".$pagetitle."</h1></a>"; ?>
-	<!-- <a href="logout.php"><h1 id="logout">Log out</h1></a>  -->
+	<a href="logout.php"><h1 id="logout">Log out</h1></a> 
 </header>

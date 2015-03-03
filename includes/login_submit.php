@@ -11,16 +11,13 @@ if (isset($_POST['submit_login'])) {
 		if(mysqli_num_rows($r) == 1) {
 		$row = mysqli_fetch_assoc($r);
 		session_start();
-		// $_SESSION["loggedin"] = 1;
-		// $loggedin = 1;
-		// $_SESSION["loggedin"] = $loggedin;
+		$loggedin = 1;
+		$_SESSION["loggedin"] = $loggedin;
 		$_SESSION["user_id"] = $row['user_id'];
 		$_SESSION["first_name"] = $row['user_firstname'];
 		$_SESSION["roll"] = $row['roll_id'];
 		$_SESSION["email"]= $row['user_email'];
-		// $user_id = $_SESSION['user_id'];
 		header("Location:".$baseurl."index.php");
-		// echo $_SESSION["user_id"];
 		} else {
 		$loginerror = "Invalid Username/Password Combination";
 		echo $loginerror;

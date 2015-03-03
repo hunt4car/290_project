@@ -5,23 +5,24 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  font: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  		/*#login {
-  		margin: 0;
-  		padding: 30px;
-  		border: 0;
-  		text-transform: uppercase;
-  		position: relative;
-  		top:-97px;
-  		left: 75%;
-  		color: black;
-  		}
-  */ }
+  font: "Palatino Linotype", "Book Antiqua", Palatino, serif; }
   body #title {
     margin: 0;
     padding: 30px;
     border: 0;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #222222; }
+  body #logout {
+    margin: 0;
+    border: 0;
+    text-transform: uppercase;
+    color: black;
+    position: absolute;
+    right: 10%;
+    top: 30px;
+    color: #FF6633; }
+  body #logout:hover {
+    color: #0084c2; }
 
 header {
   width: 100%;
@@ -38,15 +39,15 @@ header {
   #loginpage textarea {
     background-color: #0084c2;
     width: 87%;
-    min-height: 20px;
+    height: 100px;
     margin: 5%;
     margin-top: 30px;
     margin-bottom: 10px;
-    padding: 0px;
+    padding: 10px;
     text-align: center;
     border: none;
     border-radius: 5px;
-    font-size: 88px;
+    font-size: 78px;
     color: white;
     box-shadow: 0 -5px 15px rgba(100, 100, 100, 0.2) inset, 0 1px 1px rgba(255, 255, 255, 0.2); }
   #loginpage input {
@@ -57,13 +58,26 @@ header {
     font-size: 50px;
     color: white;
     position: relative;
-    left: 60%;
-    bottom: -15px;
-    margin-right: 2%;
+    left: 80%;
+    bottom: -85px;
     min-height: 70px;
     z-index: 1; }
   #loginpage input:hover {
     color: #0084c2; }
+  #loginpage #signup {
+    border-radius: 8px;
+    margin-left: 10px;
+    background-color: #0a8ecc;
+    vertical-align: middle;
+    border: none;
+    font-size: 50px;
+    color: white;
+    position: relative;
+    left: 5%;
+    bottom: -55px;
+    min-height: 70px; }
+  #loginpage #signup:hover {
+    color: #222222; }
 
 #signuppage {
   width: 100%;
@@ -97,13 +111,26 @@ header {
     z-index: 1; }
   #signuppage input:hover {
     color: #0084c2; }
+  #signuppage button {
+    border-radius: 8px;
+    margin-left: 10px;
+    background-color: #0a8ecc;
+    vertical-align: middle;
+    border: none;
+    font-size: 50px;
+    color: white;
+    position: relative;
+    left: 5%;
+    bottom: -15px;
+    min-height: 70px;
+    margin: 0px; }
 
 #about {
   width: 100%;
   min-height: 200px; }
   #about h1 {
     text-align: center;
-    padding: 20px;
+    padding: 60px;
     font-size: 44px;
     /*color: red;*/ }
 

@@ -47,5 +47,5 @@ include 'includes/post_section.php';
 </div> <!-- end main content -->
 
 <?php 
-include 'includes/footer.php';
+include 'includes/secure_footer.php';
  ?>
