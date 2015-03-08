@@ -4,7 +4,7 @@
 // functions/use
 
 $sitename = "Un-social media";
-$baseurl = "http://localhost:8888/290_project/main/290_project/";
+$baseurl = "http://localhost:8888/290_project/";
 
 
 // end function list

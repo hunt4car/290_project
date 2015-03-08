@@ -35,10 +35,10 @@ include 'includes/header.php';
              ?>
 
 	<form action="includes/signup_submit.php" method="post">
-		<textarea class="input_expandable" name="email" placeholder="Email" type="text"></textarea>
-		<textarea class="input_expandable" name="firstname" placeholder="First Name" type="text"></textarea>
-		<textarea class="input_expandable" name="lastname" placeholder="Last Name" type="text"></textarea>
-		<textarea class="input_expandable" name="password" placeholder="Password" type="password"></textarea>
+		<textarea class="input_expandable" name="email" placeholder="Email" type="email" required></textarea>
+		<textarea class="input_expandable" name="firstname" placeholder="First Name" type="text" required></textarea>
+		<textarea class="input_expandable" name="lastname" placeholder="Last Name" type="text" required></textarea>
+		<textarea class="input_expandable" name="password" placeholder="Password" type="password" required></textarea>
 
 		<input type="submit" value="Submit" name="submit_signup" />
 

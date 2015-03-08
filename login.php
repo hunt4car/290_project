@@ -5,10 +5,10 @@ include 'includes/header.php';
 
 <div id="loginpage">
 	<form action="includes/login_submit.php" method="post">
-		<textarea class="input_expandable" name="username" placeholder="Email or Username" type="text"></textarea>
-		<textarea class="input_expandable" name="password" placeholder="Password" type="text"></textarea>
+		<textarea class="input_expandable" name="username" placeholder="Email" type="email" required></textarea>
+		<textarea class="input_expandable" name="password" placeholder="Password" type="password" required></textarea>
 		<!-- <button id="post_button">Log In</button> -->
-		<input type="submit" value="Submit" name="submit_login" />
+		<input id="submit_button" type="submit" value="Submit" name="submit_login" />
 
 	</form>
 

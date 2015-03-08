@@ -50,8 +50,8 @@ header {
 	width: 100%;
 	min-height: 400px;
 	background: $main_color +10;
-		textarea {
-		background-color: $main_color;
+		.input_expandable {
+		background-color: $main_color!important;
 		width: 87%;
 		height: 100px;
 		margin: 5%;
@@ -62,11 +62,11 @@ header {
 		border: none;
 		border-radius: 5px;
 		font-size: 78px;
-		color: white;
+		color: white!important;
 		box-shadow: 0 -5px 15px rgba(100, 100, 100, 0.2) inset, 0 1px 1px rgba(255, 255, 255, 0.2);
 	}
 
-	input {
+	#submit_button {
 	border-radius: 10px;
 	background-color: $second_color;
 	vertical-align: middle;
@@ -276,7 +276,9 @@ header {
 			padding: 100px 0 0 0;
 		}
 
-
+.password {
+	display: hidden;
+}
 
 footer {
 	width: 100%;
