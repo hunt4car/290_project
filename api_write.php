@@ -1,6 +1,8 @@
 <?php 
 $pagetitle = "index";
-include 'includes/secure_includes.php';
+include'includes/mysqli_connect.php';
+include'includes/functions.php';
+include'includes/sessions.php';
 // include 'includes/post_section.php';
 
 $user_id = 15;  //"url content"

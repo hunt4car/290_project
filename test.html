@@ -12,24 +12,15 @@
 
 <script type="text/javascript">
 
-    // http://ideajam.net/ideajam/p/ij.nsf/jsonGetRecentComments
-    // http://api.jquery.com/jQuery.getJSON/
-
-    $(document).ready(function(){
-        var comments = "<ul>";
-        var ideajam_api = "http://ideajam.net/ideajam/p/ij.nsf/jsonGetRecentComments";
-
-        $.getJSON(ideajam_api, function(data){;
-            $.each(data,function(key,val){
-                for (var i = 0 ; val.length - 1; i ++) {
-                    comments = comments + "<li>" + val[i].createdby + val[i].datecreated + ": " +val[i].comment + "</li>";
-                }; //end for
-            }); //end each
-            comments = comments + "</ul>";
-            $(body).append(comments);
-
-        }); //end getjson
-    }) //end doc ready
+    $.ajax({
+    url : "http://localhost:8888/290_project/api_write.php",
+    dataType: 'json',
+    type: 'get',
+    cache: false,
+    success : function(data){
+        console.log(data);
+    }
+});
 </script>
 
 
