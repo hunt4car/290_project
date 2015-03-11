@@ -12,15 +12,26 @@
 
 <script type="text/javascript">
 
-    $.ajax({
-    url : "http://localhost:8888/290_project/api_write.php",
-    dataType: 'json',
-    type: 'get',
-    cache: false,
-    success : function(data){
-        console.log(data);
-    }
-});
+     var p =
+    {
+        "p1": "value1",
+        "p2": "value2",
+        "p3": "value3"
+    };  
+
+    // alert(p);
+
+//     for (var key in p) {
+//   if (p.hasOwnProperty(key)) {
+//     alert(key + " = " + p[key]);
+//   }
+// }
+
+var str = '{"post":{"1":"this is a post"},"date":{"1":"2014-03-03"}}';
+// var str = '{"post": 1, "val2": 2, "val3": 3}';
+var obj = jQuery.parseJSON( str );
+alert(obj.post);
+alert(obj.date[1]);
 </script>
 
 

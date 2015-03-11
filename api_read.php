@@ -21,8 +21,58 @@ $.ajax({
     type: 'get',
     cache: false,
     success : function(data){
-    	// var result = (data);
-        document.write(data);
+    	document.write(data);
+    	console.log(data);
+
+
+
+    	function json2php(object){
+    		var json = "{";
+    		for(property in object) {
+    			var value = object[property];
+    			if (typeof(value) == "string") {
+    				json += '"'+property+'":"'+value+'",'
+    			}else {
+    				if (!value[0]) {
+    					json += '"'+property+'",'+json2php(value)+',';
+    				} else {
+    					json += '""'+property+'":[';
+    					for(prop in value) json += '""'+value[prop]+'",';
+    						json = json.substr(0,json.length-1) + "]";
+
+    				}
+    			}
+    		}
+    		return json = json.substr(0,json.length-1) + "}";
+    	}
+    	// $(data.object).each(function(index,value)
+    	// 	console.log(value);
+    	// });
+	// function json2php(data);
+
+// var result = (data);
+// JSON.stringify(data);
+// document.write(data);
+// console.log(data);
+
+// convert json to javascript or php
+
+//         for (var key in data) {
+//   if (data.hasOwnProperty(key)) {
+//     alert(key + " = " + data[key]);
+//   }
+// }
+
+
+//         // prints content
+
+        var output = '';
+for (var property in data) {
+  output += property + ': ' + data[property]+'; ';
+}
+document.write(output);
+
+
     }
 });
 

@@ -13,17 +13,29 @@ $sql = "SELECT * FROM posts
             $result = $dbc->query($sql);
 
             
-            //Create an array
-    $json_response = array();
+    $encode = array();
+
+$encode = array();
+$i = 1;
+while($row = mysqli_fetch_assoc($result)) {
+   $encode[$i][$row['post_content']] = $row['post_date'];
+$i++;
+}
+
+echo json_encode($encode);
+
+
+    //Create an array
+    // $json_response = array();
     
-    while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-        $row_array['post_date'] = $row['post_date'];
-        $row_array['post_content'] = $row['post_content'];
+    // while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
+    //     $row_array['post_date'] = $row['post_date'];
+    //     $row_array['post_content'] = $row['post_content'];
         
-        //push the values in the array
-        array_push($json_response,$row_array);
-    }
-    echo json_encode($json_response);
+    //     //push the values in the array
+    //     array_push($json_response,$row_array);
+    // }
+    // echo json_encode($json_response);
 
 
              ?>
