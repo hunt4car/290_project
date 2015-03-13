@@ -12,6 +12,9 @@
 </head>
 
 <!-- <script type='text/javascript' src='http://code.jquery.com/jquery-1.11.0.min.js'></script> -->
+<p id="demo">
+	
+</p>
 <script type="text/javascript">
 
 
@@ -21,30 +24,67 @@ $.ajax({
     type: 'get',
     cache: false,
     success : function(data){
-    	document.write(data);
-    	console.log(data);
+    	var i = 0;
+    	while(data.posts[i].date != null){
+  document.write(data.posts[i].date);
+  document.write(data.posts[i].content);
+  i++;
+};
+}
+
+    	// alert(data.posts[0].date);
+
+    	// alert(data);
+    	// document.write(data);
+    	// console.log(data);
+
+    	// var obj = "";
+    	// obj = JSON.parse(data);
+
+
+        // }
+});
+
+//     	var text = '{"employees":[' +
+// '{"firstName":"John","lastName":"Doe" },' +
+// '{"firstName":"Anna","lastName":"Smith" },' +
+// '{"firstName":"Peter","lastName":"Jones" }]}';
+
+//     	obj = JSON.parse(text);
+// document.getElementById("demo").innerHTML =
+// obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+
+    	// while data has result
+    		// get object 1, key and value
+    		// echo key
+    		// echo value
+    	// repeat incrimentally until no more data
 
 
 
-    	function json2php(object){
-    		var json = "{";
-    		for(property in object) {
-    			var value = object[property];
-    			if (typeof(value) == "string") {
-    				json += '"'+property+'":"'+value+'",'
-    			}else {
-    				if (!value[0]) {
-    					json += '"'+property+'",'+json2php(value)+',';
-    				} else {
-    					json += '""'+property+'":[';
-    					for(prop in value) json += '""'+value[prop]+'",';
-    						json = json.substr(0,json.length-1) + "]";
+    	// function json2php(object){
+    	// 	var json = "{";
+    	// 	for(property in object) {
+    	// 		var value = object[property];
+    	// 		if (typeof(value) == "string") {
+    	// 			json += '"'+property+'":"'+value+'",'
+    	// 		}else {
+    	// 			if (!value[0]) {
+    	// 				json += '"'+property+'",'+json2php(value)+',';
+    	// 			} else {
+    	// 				json += '""'+property+'":[';
+    	// 				for(prop in value) json += '""'+value[prop]+'",';
+    	// 					json = json.substr(0,json.length-1) + "]";
 
-    				}
-    			}
-    		}
-    		return json = json.substr(0,json.length-1) + "}";
-    	}
+    	// 			}
+    	// 		}
+    	// 	}
+    	// 	return json = json.substr(0,json.length-1) + "}";
+    	// }
+
+
+
     	// $(data.object).each(function(index,value)
     	// 	console.log(value);
     	// });
@@ -66,42 +106,11 @@ $.ajax({
 
 //         // prints content
 
-        var output = '';
-for (var property in data) {
-  output += property + ': ' + data[property]+'; ';
-}
-document.write(output);
-
-
-    }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//         var output = '';
+// for (var property in data) {
+//   output += property + ': ' + data[property]+'; ';
+// }
+// document.write(output);
 
 
 // var html = "http://localhost:8888/290_project/api_write.php";	

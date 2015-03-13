@@ -12,24 +12,40 @@ $sql = "SELECT * FROM posts
             ORDER BY post_date DESC ";
             $result = $dbc->query($sql);
 
-            
-    $encode = array();
 
-$encode = array();
-$i = 1;
-while($row = mysqli_fetch_assoc($result)) {
-   $encode[$i][$row['post_content']] = $row['post_date'];
-$i++;
-}
+            $rows = array();
 
-echo json_encode($encode);
+                while ($row = mysqli_fetch_array($result))
+                {
+                    $post = array();
+                    $post['date'] = $row['post_date'];
+                    $post['content'] = $row['post_content'];
+
+                    $rows["posts"][] = $post;
+                }
+
+            echo json_encode($rows);
 
 
+// --------------------            
+//     $encode = array();
+
+// $encode = array();
+// $i = 1;
+// while($row = mysqli_fetch_assoc($result)) {
+//     // $encode["post"][$row['post_content']] = $row['post_date'];
+//     $encode["post"]['post_content'][$row['post_content']] = ['post_date'][$row['post_date']];
+// $i++;
+// }
+
+// echo json_encode($encode);
+
+// -----------------
     //Create an array
     // $json_response = array();
     
     // while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
-    //     $row_array['post_date'] = $row['post_date'];
+    //     $row_array{"post"}['post_date'] = $row['post_date'];
     //     $row_array['post_content'] = $row['post_content'];
         
     //     //push the values in the array

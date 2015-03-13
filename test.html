@@ -27,11 +27,11 @@
 //   }
 // }
 
-var str = '{"post":{"1":"this is a post"},"date":{"1":"2014-03-03"}}';
+var str = '{"posts":{"2015-03-03": "33","2014-03-03": "33 33"}}';
 // var str = '{"post": 1, "val2": 2, "val3": 3}';
 var obj = jQuery.parseJSON( str );
-alert(obj.post);
-alert(obj.date[1]);
+alert(obj.posts[0]);
+// alert(obj.posts[]);
 </script>
 
 
