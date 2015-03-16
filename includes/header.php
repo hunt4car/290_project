@@ -2,8 +2,8 @@
 include'mysqli_connect.php';
 include'includes/functions.php';
 //for non-user protected pages
- ?>
- 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +25,7 @@ include'includes/functions.php';
 </head>
 
 <body>
-<header>
-	<?php echo "<a href='".$baseurl."index.php'><h1 id='title'>Un-social Media - ".$pagetitle."</h1></a>"; ?>
-	<!-- <a href="logout.php"><h1 id="logout">Log out</h1></a>  -->
-</header>
+	<header>
+		<?php echo "<a href='".$baseurl."index.php'><h1 id='title'>Un-social Media - ".$pagetitle."</h1></a>"; ?>
+		<!-- <a href="logout.php"><h1 id="logout">Log out</h1></a>  -->
+	</header>

@@ -13,24 +13,24 @@
 
 <script type="text/javascript">
 
-var username = "22"; 
-var userpass = "22";
-$.ajax({
-    url : "http://localhost:8888/290_project/api_write.php?name="+username+"&pass="+userpass+"",
-    dataType: 'json',
-    type: 'get',
-    cache: false,
-    success : function(data){
-    	var i = 0;
-    	while(data.posts[i].date != null){
-		  $(document.body).append(data.posts[i].date);
-		  $(document.body).append("<br>");
-		  $(document.body).append(data.posts[i].content);
-		  $(document.body).append("<br>");
-		  i++;
-		};
-	}
-});
+	var username = "22"; 
+	var userpass = "22";
+	$.ajax({
+		url : "http://localhost:8888/290_project/api_write.php?name="+username+"&pass="+userpass+"",
+		dataType: 'json',
+		type: 'get',
+		cache: false,
+		success : function(data){
+			var i = 0;
+			while(data.posts[i].date != null){
+				$(document.body).append(data.posts[i].date);
+				$(document.body).append("<br>");
+				$(document.body).append(data.posts[i].content);
+				$(document.body).append("<br>");
+				i++;
+			};
+		}
+	});
 
 </script>
 <body>	

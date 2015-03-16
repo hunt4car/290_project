@@ -16,9 +16,9 @@ include 'includes/header.php';
 </div>
 
 <div id="about">
-<h1>Unsocial media, a social media website for your eyes only. Enjoy the power of posting anything you feel like posting, and enjoy looking back to through your posts.</h1>	
+	<h1>Unsocial media, a social media website for your eyes only. Enjoy the power of posting anything you feel like posting, and enjoy looking back to through your posts.</h1>	
 </div>  <!-- end about -->
 
 <?php 
 include 'includes/footer.php';
- ?>
+?>
