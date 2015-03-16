@@ -7,8 +7,9 @@ include 'includes/post_section.php';
 <div id="main_content">
 
     <select ONCHANGE="location = this.options[this.selectedIndex].value;">
-        <option value="#main_content">Week</option>
-        <option value="index.php#main_content">Year</option>
+        <option value="week.php#main_content">Week</option>
+        <option value="index.php#main_content">All</option>
+        <option value="year.php#main_content">Year</option>
         <option value="month.php#main_content">Month</option>
     </select>
 <!-- <a href="stats.php"><button id="post_button">Stats</button></a>

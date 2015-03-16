@@ -5,6 +5,7 @@
 
 $sitename = "Un-social media";
 $baseurl = "http://localhost:8888/290_project/";
+error_reporting(0); // Turn off all error reporting
 
 
 

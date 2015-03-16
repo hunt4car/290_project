@@ -9,6 +9,8 @@ include'includes/functions.php';
 
 $un = $_GET["name"];
 $pass = $_GET["pass"];
+sanitize($un, $pass);
+
 
 // get user id using username and password
 if(isset($un, $pass)) {
@@ -18,6 +20,7 @@ if(isset($un, $pass)) {
         $row = mysqli_fetch_assoc($r);
         session_start();
         $user_id = $row['user_id'];}
+        sanitize($user_id);
     } else {
         $loginerror = "Invalid Username/Password Combination OR none entered";
         echo $loginerror;

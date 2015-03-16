@@ -1,24 +1,24 @@
 <?php 
-$pagetitle = "index";
+$pagetitle = "All posts";
 include 'includes/secure_header.php';
 include 'includes/post_section.php';
 ?>
 <div id="main_content">
 
     <select ONCHANGE="location = this.options[this.selectedIndex].value;">
-        <option value="all.php#main_content">All</option>
-        <option value="index.php#main_content">Year</option>
+        <option value="year.php#main_content">Year</option>
+        <option value="index.php#main_content">All</option>
         <option value="month.php#main_content">Month</option>
         <option value="week.php#main_content">Week</option>
-        
     </select>
 <!-- <a href="stats.php"><button id="post_button">Stats</button></a>
     <a href="more.php"><button id="post_button">More</button></a> -->
 
     <div class="lightslider">
+
         <?php 
         $sql = "SELECT * FROM posts
-        WHERE `user_id` = '$user_id' AND post_date >= (DATE_SUB(CURDATE(), INTERVAL 1 YEAR))
+        WHERE `user_id` = '$user_id' AND post_date >= NOW() - INTERVAL 1 YEAR
         ORDER BY post_date DESC ";
         $result = $dbc->query($sql);
 
