@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>test</title>
+	<title>API - Read</title>
 	<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.0.min.js'></script>
 	<script type='text/javascript' src='includes/js/json2html.js'></script>
 	<script type='text/javascript' src='includes/js/jquery.json2html.js'></script>
@@ -11,132 +11,30 @@
 	<!-- <script type='text/javascript' src=''></script> -->
 </head>
 
-<!-- <script type='text/javascript' src='http://code.jquery.com/jquery-1.11.0.min.js'></script> -->
-<p id="demo">
-	
-</p>
 <script type="text/javascript">
 
-
+var username = "22"; 
+var userpass = "22";
 $.ajax({
-    url : "http://localhost:8888/290_project/api_write.php",
+    url : "http://localhost:8888/290_project/api_write.php?name="+username+"&pass="+userpass+"",
     dataType: 'json',
     type: 'get',
     cache: false,
     success : function(data){
     	var i = 0;
     	while(data.posts[i].date != null){
-  document.write(data.posts[i].date);
-  document.write(data.posts[i].content);
-  i++;
-};
-}
-
-    	// alert(data.posts[0].date);
-
-    	// alert(data);
-    	// document.write(data);
-    	// console.log(data);
-
-    	// var obj = "";
-    	// obj = JSON.parse(data);
-
-
-        // }
+		  $(document.body).append(data.posts[i].date);
+		  $(document.body).append("<br>");
+		  $(document.body).append(data.posts[i].content);
+		  $(document.body).append("<br>");
+		  i++;
+		};
+	}
 });
-
-//     	var text = '{"employees":[' +
-// '{"firstName":"John","lastName":"Doe" },' +
-// '{"firstName":"Anna","lastName":"Smith" },' +
-// '{"firstName":"Peter","lastName":"Jones" }]}';
-
-//     	obj = JSON.parse(text);
-// document.getElementById("demo").innerHTML =
-// obj.employees[1].firstName + " " + obj.employees[1].lastName;
-
-
-    	// while data has result
-    		// get object 1, key and value
-    		// echo key
-    		// echo value
-    	// repeat incrimentally until no more data
-
-
-
-    	// function json2php(object){
-    	// 	var json = "{";
-    	// 	for(property in object) {
-    	// 		var value = object[property];
-    	// 		if (typeof(value) == "string") {
-    	// 			json += '"'+property+'":"'+value+'",'
-    	// 		}else {
-    	// 			if (!value[0]) {
-    	// 				json += '"'+property+'",'+json2php(value)+',';
-    	// 			} else {
-    	// 				json += '""'+property+'":[';
-    	// 				for(prop in value) json += '""'+value[prop]+'",';
-    	// 					json = json.substr(0,json.length-1) + "]";
-
-    	// 			}
-    	// 		}
-    	// 	}
-    	// 	return json = json.substr(0,json.length-1) + "}";
-    	// }
-
-
-
-    	// $(data.object).each(function(index,value)
-    	// 	console.log(value);
-    	// });
-	// function json2php(data);
-
-// var result = (data);
-// JSON.stringify(data);
-// document.write(data);
-// console.log(data);
-
-// convert json to javascript or php
-
-//         for (var key in data) {
-//   if (data.hasOwnProperty(key)) {
-//     alert(key + " = " + data[key]);
-//   }
-// }
-
-
-//         // prints content
-
-//         var output = '';
-// for (var property in data) {
-//   output += property + ': ' + data[property]+'; ';
-// }
-// document.write(output);
-
-
-// var html = "http://localhost:8888/290_project/api_write.php";	
-
-// document.write(html);
-
-// var url;
-// $.ajax({
-//     url : "http://localhost:8888/290_project/api_write.php",
-//     success : function(result){
-//     	var url = result;
-//         document.write(url);
-//         var html = json2html(url);
-//     	document.write(html);
-
-//     }
-   
-// });
-
-// document.write(url);
-// var html = json2html(url);
-//     document.write(html);
-
 
 </script>
 <body>	
+
 </body>
 </html>
 
